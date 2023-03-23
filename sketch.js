@@ -9,24 +9,21 @@ const height = 600;
 
 function setup() {
   // Create canvas
-  const canvas = createCanvas(width, height);
-  
-  // Set the parent element of the canvas to the div with ID canvas-container
-  canvas.parent('canvas-container');
-  
+  createCanvas(width, height);
+
   // Set the background color to white
   background(255);
-  
+
   // Move the origin to the center of the canvas
   translate(width/2, height/2);
-  
+
   // Draw a grid
   stroke(200);
   for (let i = -width/2; i < width/2; i += 20) {
     line(i, -height/2, i, height/2);
     line(-width/2, i, width/2, i);
   }
-  
+
   // Draw the graph
   stroke(0);
   beginShape();
